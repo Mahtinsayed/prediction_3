@@ -22,7 +22,7 @@ st.sidebar.markdown("""
 #
 @st.cache
 def load_data():
-    url = 'https://docs.google.com/spreadsheets/d/1ulIisgfdoxLhuvtrmm6gKWVBc4M14Tx-5Hg8hR9KvCU/edit#gid=775382138'
+    url = 'https://docs.google.com/spreadsheets/d/1ulIisgfdoxLhuvtrmm6gKWVBc4M14Tx-5Hg8hR9KvCU/export?format=csv'
     html = pd.read_html(url, header = 0)
     df = html[0]
     return df
