@@ -4,8 +4,7 @@ import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestClassifier
 import base64
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 st.write("""
 # Penguin Prediction App
 
@@ -27,7 +26,7 @@ def load_data():
     df = html[0]
     return df
 
-df = load_data()
+
 sector = df.groupby('penguins_cleaned.csv')
 # Collects user input features into dataframe
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
