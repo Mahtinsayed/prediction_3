@@ -4,6 +4,8 @@ import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestClassifier
 import base64
+import matplotlib.pyplot as plt
+import seaborn as sns
 st.write("""
 # Penguin Prediction App
 
