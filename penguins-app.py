@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestClassifier
-
+import base64
 st.write("""
 # Penguin Prediction App
 
