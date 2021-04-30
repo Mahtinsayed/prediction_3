@@ -21,7 +21,7 @@ st.sidebar.header('User Input Features')
 #
 @st.cache
 def load_data():
-    url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQWPoM1zq7FrW06SYxMIWboclt5FQoRB_rgWFRjzhvY-YN9NlZbm_TaB4Je2e0KulhGX8BmD3inUhI1/pub?gid=775382138&single=true&output=csv'
+    url = 'https://docs.google.com/spreadsheets/d/1ulIisgfdoxLhuvtrmm6gKWVBc4M14Tx-5Hg8hR9KvCU/edit?usp=sharing'
     html = pd.read_html(url, header = 0)
     df = html[0]
     return df
