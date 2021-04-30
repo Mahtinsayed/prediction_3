@@ -18,6 +18,17 @@ st.sidebar.markdown("""
 [Example CSV input file](https://drive.google.com/file/d/13UAb77GVcWiCNYy17ZzQuaX7GVq9I1jy/view?usp=sharing)
 """)
 
+# Web scraping of S&P 500 data
+#
+@st.cache
+def load_data():
+    url = 'https://docs.google.com/spreadsheets/d/1ulIisgfdoxLhuvtrmm6gKWVBc4M14Tx-5Hg8hR9KvCU/edit#gid=775382138'
+    html = pd.read_html(url, header = 0)
+    df = html[0]
+    return df
+
+df = load_data()
+sector = df.groupby('penguins_cleaned.csv')
 # Collects user input features into dataframe
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 if uploaded_file is not None:
@@ -42,7 +53,7 @@ else:
 
 # Combines user input features with entire penguins dataset
 # This will be useful for the encoding phase
-penguins_raw = pd.read_csv('pehttps://docs.google.com/spreadsheets/d/1ulIisgfdoxLhuvtrmm6gKWVBc4M14Tx-5Hg8hR9KvCU/export?format=csv')
+penguins_raw = pd.read_csv('penguins_cleaned.csv')
 penguins = penguins_raw.drop(columns=['species'])
 df = pd.concat([input_df,penguins],axis=0)
 
