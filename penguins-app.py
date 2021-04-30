@@ -42,7 +42,7 @@ else:
 
 # Combines user input features with entire penguins dataset
 # This will be useful for the encoding phase
-penguins_raw = pd.read_csv('https://docs.google.com/spreadsheets/d/1ulIisgfdoxLhuvtrmm6gKWVBc4M14Tx-5Hg8hR9KvCU/edit?usp=sharing')
+penguins_raw = pd.read_csv('pehttps://docs.google.com/spreadsheets/d/1ulIisgfdoxLhuvtrmm6gKWVBc4M14Tx-5Hg8hR9KvCU/export?format=csv')
 penguins = penguins_raw.drop(columns=['species'])
 df = pd.concat([input_df,penguins],axis=0)
 
